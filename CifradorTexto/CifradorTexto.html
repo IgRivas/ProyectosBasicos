@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncriptadorTXT</title>
+</head>
+<body>
+
+    <h1>Cifrador de Texto OcultaRapido </h1>
+    <h3>Ingrese el texo aqui 
+        <input type="text" id="texto"> <button id="cifrar">Cifrar</button>
+        <button> Descifrar</button>
+    </h3>
+    <h3>Resultado   <textarea name="" id="result" cols="30" rows="10"> </textarea>
+    </h3>
+    <footer>
+        <h2>Desarrollado por  Ignacio Rivas
+
+        </h2>
+    </footer>
+</body>
+<script>
+   
+    let btnCifrar = document.getElementById('cifrar');  
+    let resultado  = document.getElementById('result');
+    
+
+    btnCifrar.addEventListener("click", cifrar);
+    
+    
+    function cifrar(texto){
+        texto = document.getElementById('texto').value;
+        console.log(texto);
+        for(i = 0; i<texto.length; i++){
+            console.log(texto[i]);
+            switch(texto[i]){
+                case 'a':
+                resultado.innerHTML += texto[i]+ 'i';
+                break;
+                case 'e':
+                resultado.innerHTML += texto[i]+ 'nter';
+                break;
+                case 'i':
+                resultado.innerHTML += texto[i]+ 'mes';
+                break;
+                case 'o':
+                resultado.innerHTML += texto[i]+ 'ber';
+                break;
+                case 'u':
+                resultado.innerHTML += texto[i]+ 'fat';
+                break;
+                default :  resultado.innerHTML += texto[i];;
+
+               
+            }
+            
+        }
+
+    }
+</script>
+</html>
